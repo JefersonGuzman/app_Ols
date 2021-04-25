@@ -14,12 +14,11 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from  '@material-ui/core/Typography';
 import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
+// import Modal from '@material-ui/core/Modal';
 
 import { Table } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { positions } from '@material-ui/system';
-
-
+// import { makeStyles } from '@material-ui/core/styles';
+// import { positions } from '@material-ui/system';
 
 
 
@@ -38,7 +37,7 @@ function  Usuario() {
   const [users, guardarUsers] = useState(userIniciales);
 
   const [modalInsertar, guardarEstado] = useState(false);
-  const [modalEditar, guardarEstadoE] = useState(false);
+  // const [modalEditar, guardarEstadoE] = useState(false);
  
 
   //use effect  cuando se realiza alguna cambio en el estado
@@ -48,7 +47,7 @@ function  Usuario() {
     }else{
       localStorage.setItem('users',JSON.stringify([]));
     }
-  }, [users]);
+  }, [users,userIniciales]);
 
   // funcion para mostar y ocultar los modales
   const mostrarModalInsertar=()=>{
@@ -127,6 +126,7 @@ function  Usuario() {
             modalInsertar={modalInsertar}
             guardarEstado={guardarEstado}
             insertar={insertar}
+            userIniciales={userIniciales.identificacion}
           />
          
         </Fragment>

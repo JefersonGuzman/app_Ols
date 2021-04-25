@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import uuid from 'react-uuid';
 
-
-
 import {
-  Table,
   Button,
   Modal,
-  Container,
   ModalBody,
   ModalHeader,
   FormGroup,
@@ -35,7 +31,7 @@ function ModalUsuario({modalInsertar,guardarEstado,insertar}){
       })
     }     
  
-  const {id,nombre,apellido,identificacion,rol,estado,telefono,email} = user;
+  const {nombre,apellido,identificacion,rol,estado,telefono,email} = user;
 
   //validacion de los datos
   const submitUser = e =>{

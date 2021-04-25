@@ -6,6 +6,7 @@
   --negro: #000000;
   --headingFont:'Raleway', sans-serif;
   --textFont:  'Roboto', sans-serif;
+  --red: #ff0000;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -31,6 +32,7 @@ h1, h2 {
   text-align: center;
   color: var(--gris2);
 }
+
 h1 span {
   font-weight: 400;
 }
@@ -117,6 +119,7 @@ aside  {
   border-bottom: 1px solid var(--gris2);
   border-radius: 0;
   background-color: var(--gris1);
+
 }
 .formulario-nuevo-proyecto .input-text::placeholder{
   color: var(--gris2);
@@ -177,6 +180,14 @@ aside  {
   border-radius: .5rem;
   flex: 1;
   width: 100%;
+}
+
+.input{
+  display: inline-block;
+  border-radius: .5rem;
+  max-width: 600px;
+
+
 }
 
 /** TAREAS LISTADO **/
@@ -281,6 +292,7 @@ aside  {
 .proyecto-exit {
   opacity: 1;
 }
+
 .tarea-exit-active,
 .proyecto-exit-active {
   opacity: 0;
@@ -288,7 +300,6 @@ aside  {
 }
 
 .form-usuario {
-    background-color: var(--gris2);
     height: 100vh;
     min-height: 800px;
     display: flex;
@@ -298,10 +309,12 @@ aside  {
 
 .contenedor-form {
     padding: 5rem 3rem;
-    max-width: 500px;
+    max-width: 350px;
     width: 95%;
     background-color: var(--blanco);
     border-radius: 1rem;
+    margin-left:100rem;
+
 }
 
 .campo-form {
@@ -329,3 +342,4 @@ aside  {
   display: block;
   opacity: .7;
 }
+
